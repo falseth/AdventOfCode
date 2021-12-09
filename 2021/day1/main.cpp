@@ -1,9 +1,14 @@
 #include <iostream>
 #include <fstream>
+#include <vector>
 
 using namespace std;
 
 int main(void) {
+    int window_size;
+    cout << "Window Size: ";
+    cin >> window_size;
+
     ifstream file;
     file.open("2021/day1/input.txt");
 
@@ -13,23 +18,32 @@ int main(void) {
     }
 
     string line;
-    int increasing_times = 0;
-    int last_depth, current_depth;
-
-    getline(file, line);
-    last_depth = stoi(line);
-
+    vector<int> input;
     while (getline(file, line)) {
-        current_depth = stoi(line);
-        
+        input.push_back(stoi(line));
+    }
+    file.close();
+
+    int increasing_times = 0;
+    int last_depth = 0, current_depth = 0;
+
+    for (int j = 0; j < window_size; j++) {
+        last_depth += input[j];
+    }
+
+    for (int i = 1; i < input.size() - window_size + 1; i++) {
+        for (int j = 0; j < window_size; j++) {
+            current_depth += input[i+j];
+        }
+
         if (current_depth > last_depth) {
             increasing_times++;
         }
 
         last_depth = current_depth;
+        current_depth = 0;
     }
 
-    cout << increasing_times << endl;
-    file.close();
+    cout << "With a window size of " << window_size << ", the depth increases " << increasing_times << " number of times." << endl;
     return 0;
 }
