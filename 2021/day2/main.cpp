@@ -20,19 +20,20 @@ int main(void) {
     }
     file.close();
 
-    int x_pos = 0, depth = 0;
+    int x_pos = 0, depth = 0, aim = 0;
     for (int i = 0; i < input.size(); i++) {
         switch (input[i][0]) {
         case 'u':
-            depth -= stoi(input[i].substr(input[i].find(' ') + 1, input[i].size()));
+            aim -= stoi(input[i].substr(input[i].find(' ') + 1, input[i].size()));
             break;
 
         case 'd':
-            depth += stoi(input[i].substr(input[i].find(' ') + 1, input[i].size()));
+            aim += stoi(input[i].substr(input[i].find(' ') + 1, input[i].size()));
             break;
 
         case 'f':
             x_pos += stoi(input[i].substr(input[i].find(' ') + 1, input[i].size()));
+            depth += stoi(input[i].substr(input[i].find(' ') + 1, input[i].size())) * aim;
             break;
 
         default:
