@@ -60,9 +60,10 @@ public:
                 cout << " ";
             }
             SetConsoleTextAttribute(hConsole, 0x0F);
-            cout << "\n";
+            cout << endl;
         }
 
+        SetConsoleTextAttribute(hConsole, 0x0F);
         cout << "Steps to Win: " << steps_to_win << endl;
         cout << "Final Score: " << score << endl;
     }
