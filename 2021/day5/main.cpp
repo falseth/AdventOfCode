@@ -1,7 +1,6 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <windows.h>
 #include "EasyBMP.h"
 
 using namespace std;
@@ -97,25 +96,22 @@ public:
         this->check();
     }
 
-    void to_console() {
-        HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    void output() {
+        BMP image;
+        image.SetSize(this->length, this->width);
+        image.SetBitDepth(32);
         for (int i = 0; i < this->width; i++) {
             for (int j = 0; j < this->length; j++) {
                 if (this->map[i][j] >= 2) {
-                    SetConsoleTextAttribute(hConsole, 0x0C);
-                } else {
-                    SetConsoleTextAttribute(hConsole, 0x0F);
+                    image(j, i)->Red = 255;
+                    image(j, i)->Green = 0;
+                    image(j, i)->Blue = 0;
+                    image(j, i)->Alpha = 255;
                 }
-                cout << this->map[i][j];
-
-                SetConsoleTextAttribute(hConsole, 0x0F);
-                cout << " ";
             }
-            SetConsoleTextAttribute(hConsole, 0x0F);
-            cout << endl;
         }
+        image.WriteToFile("output.bmp");
 
-        SetConsoleTextAttribute(hConsole, 0x0F);
         cout << "There are " << this->overlaps << " points where at least two lines overlap." << endl;
     }
 
@@ -133,22 +129,8 @@ private:
 };
 
 int main(void) {
-    BMP AnImage;
-    // Set size to 640 × 480
-    AnImage.SetSize(640,480);
-    // Set its color depth to 32-bits
-    AnImage.SetBitDepth(32);
-
-    // Set one of the pixels
-    AnImage(14,18)->Red = 255;
-    AnImage(14,18)->Green = 255;
-    AnImage(14,18)->Blue = 255;
-    AnImage(14,18)->Alpha = 0;
-
-    AnImage.WriteToFile("Output.bmp");
-
     ifstream file;
-    file.open("test.txt");
+    file.open("input.txt");
 
     if (!file.is_open()) {
         cout << "AN ERROR HAS OCCURRED" << endl;
@@ -162,16 +144,16 @@ int main(void) {
     }
     file.close();
 
-    Map map(10, 10);
+    int length = 1000, width = 1000;
+    Map map(length, width);
     for (string line : input) {
         Point start(stoi(parse(parse(line, " -> ")[0], ",")[0]), stoi(parse(parse(line, " -> ")[0], ",")[1]));
         Point end(stoi(parse(parse(line, " -> ")[1], ",")[0]), stoi(parse(parse(line, " -> ")[1], ",")[1]));
 
         map.add_line(Line(start, end));
     }
-    map.to_console();
-    cout << map.overlaps << endl;
 
+    map.output();
     return 0;
 }
 

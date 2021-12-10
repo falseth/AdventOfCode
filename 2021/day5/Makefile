@@ -3,20 +3,19 @@
 CC = g++
 CFLAGS = -lm
 
-SRCS := $(wildcard *.cpp)
-BINS := $(SRCS:%.cpp=%.exe)
-OBJS := $(SRCS:%.cpp=%.o)
+all: main.exe run clean
 
-all: ${BINS} run clean
+main.exe: main.o EasyBMP.o
+	@${CC} ${CFLAGS} main.o EasyBMP.o -o $@
 
-${BINS}: ${OBJS}
-	@${CC} ${CFLAGS} $< -o $@
+main.o: main.cpp
+	@${CC} ${CFLAGS} -c $< -o $@
 
-${OBJS}: ${SRCS}
-	@${CC} -c $< -o $@
+EasyBMP.o: EasyBMP.cpp
+	@${CC} ${CFLAGS} -c $< -o $@
 
 run:
 	@.\main.exe
 
 clean:
-	@rm -rf ${BINS} ${OBJS}
+	@rm -rf main.exe main.o EasyBMP.o
