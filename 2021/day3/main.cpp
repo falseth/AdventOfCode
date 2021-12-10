@@ -7,7 +7,7 @@ using namespace std;
 
 int main(void) {
     ifstream file;
-    file.open("2021/day3/input.txt");
+    file.open("input.txt");
 
     if (!file.is_open()) {
         cout << "AN ERROR HAS OCCURRED" << endl;

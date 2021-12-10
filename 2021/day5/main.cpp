@@ -2,6 +2,7 @@
 #include <fstream>
 #include <vector>
 #include <windows.h>
+#include "EasyBMP.h"
 
 using namespace std;
 
@@ -132,8 +133,22 @@ private:
 };
 
 int main(void) {
+    BMP AnImage;
+    // Set size to 640 × 480
+    AnImage.SetSize(640,480);
+    // Set its color depth to 32-bits
+    AnImage.SetBitDepth(32);
+
+    // Set one of the pixels
+    AnImage(14,18)->Red = 255;
+    AnImage(14,18)->Green = 255;
+    AnImage(14,18)->Blue = 255;
+    AnImage(14,18)->Alpha = 0;
+
+    AnImage.WriteToFile("Output.bmp");
+
     ifstream file;
-    file.open("2021/day5/input.txt");
+    file.open("test.txt");
 
     if (!file.is_open()) {
         cout << "AN ERROR HAS OCCURRED" << endl;
@@ -147,14 +162,15 @@ int main(void) {
     }
     file.close();
 
-    Map coords(1000, 1000);
+    Map map(10, 10);
     for (string line : input) {
         Point start(stoi(parse(parse(line, " -> ")[0], ",")[0]), stoi(parse(parse(line, " -> ")[0], ",")[1]));
         Point end(stoi(parse(parse(line, " -> ")[1], ",")[0]), stoi(parse(parse(line, " -> ")[1], ",")[1]));
 
-        coords.add_line(Line(start, end));
+        map.add_line(Line(start, end));
     }
-    cout << coords.overlaps << endl;
+    map.to_console();
+    cout << map.overlaps << endl;
 
     return 0;
 }

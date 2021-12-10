@@ -123,7 +123,7 @@ vector<string> parse(string input, string delimiter);
 
 int main(void) {
     ifstream file;
-    file.open("2021/day4/input.txt");
+    file.open("input.txt");
 
     if (!file.is_open()) {
         cout << "AN ERROR HAS OCCURRED" << endl;

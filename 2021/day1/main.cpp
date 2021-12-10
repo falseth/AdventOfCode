@@ -10,7 +10,7 @@ int main(void) {
     cin >> window_size;
 
     ifstream file;
-    file.open("2021/day1/input.txt");
+    file.open("input.txt");
 
     if (!file.is_open()) {
         cout << "AN ERROR HAS OCCURRED" << endl;
