@@ -3,17 +3,14 @@
 CC = g++
 CFLAGS = -lm
 
+BINS := main.exe
 SRCS := $(wildcard *.cpp)
-BINS := $(SRCS:%.cpp=%.exe)
 OBJS := $(SRCS:%.cpp=%.o)
 
 all: ${BINS} run clean
 
 ${BINS}: ${OBJS}
-	@${CC} ${CFLAGS} $< -o $@
-
-${OBJS}: ${SRCS}
-	@${CC} -c $< -o $@
+	${CC} ${CFLAGS} ${OBJS} -o $@
 
 run:
 	@.\main.exe
