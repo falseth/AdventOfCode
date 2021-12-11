@@ -64,6 +64,22 @@ public:
             }
         } else if (this->start.x == this->end.x && this->start.y == this->end.y) {
             points.push_back(Point(this->start.x, this->start.y));
+        } else if (this->start.x > this->end.x && this->start.y > this->end.y) {
+            for (int i = this->start.x; i >= this->end.x; i--) {
+                points.push_back(Point(i, this->start.y - this->start.x + i));
+            }
+        } else if (this->start.x > this->end.x && this->start.y < this->end.y) {
+            for (int i = this->start.x; i >= this->end.x; i--) {
+                points.push_back(Point(i, this->start.y + this->start.x - i));
+            }
+        } else if (this->start.x < this->end.x && this->start.y > this->end.y) {
+            for (int i = this->start.x; i <= this->end.x; i++) {
+                points.push_back(Point(i, this->start.y + this->start.x - i));
+            }
+        } else if (this->start.x < this->end.x && this->start.y < this->end.y) {
+            for (int i = this->start.x; i <= this->end.x; i++) {
+                points.push_back(Point(i, this->start.y - this->start.x + i));
+            }
         }
     }
 
