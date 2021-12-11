@@ -48,13 +48,15 @@ Crabs::Crabs(vector<string>& positions) {
 
     int lowest = 0;
     for (int j = 0; j < crabsCount.size(); j++) {
-        lowest += j * crabsCount[j];
+        lowest += (j * (j + 1) * crabsCount[j]) / 2;
     }
 
-    for (int i = 1; i < crabsCount.size(); i++) {
+    int i;
+    for (i = 1; i < crabsCount.size(); i++) {
         int tmp = 0;
         for (int j = 0; j < crabsCount.size(); j++) {
-            tmp += abs(i - j) * crabsCount[j];
+            int n = abs(i - j);
+            tmp += (n * (n + 1) * crabsCount[j]) / 2;
         }
 
         if (tmp >= lowest) {
@@ -64,6 +66,11 @@ Crabs::Crabs(vector<string>& positions) {
         } else {
             lowest = tmp;
         }
+    }
+
+    if (i == crabsCount.size()) {
+        this->lowestPosition = i - 1 + this->min;
+        this->lowestScore = lowest;
     }
 }
 
