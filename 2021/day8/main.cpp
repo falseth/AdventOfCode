@@ -19,13 +19,28 @@ int main(void) {
     file.close();
 
     vector<Displays> displaysArray;
-    int totalCount = 0;
+    int totalBasicDigitsCount = 0;
+    int outputSum = 0;
     for (string entry : input) {
         Displays displays(entry);
         displays.toConsole();
-        totalCount += displays.basicDigitsCount;
+        totalBasicDigitsCount += displays.basicDigitsCount;
+        outputSum += stoi(displays.output);
         displaysArray.push_back(displays);
     }
-    cout << "The total amount of time digits 1, 4, 7, and 8 appear on the output is " << totalCount << " times." << endl;
+
+    BMP image;
+    image.SetSize(displaysArray[0].output.size() * 7 - 1, displaysArray.size() * 12 - 1);
+    image.SetBitDepth(32);
+    for (int i = 0; i < displaysArray.size(); i++) {
+        for (int j = 0; j < displaysArray[i].output.size(); j++) {
+            drawDisplay(displaysArray[i].output[j], image, j, i);
+        }
+    }
+    image.WriteToFile("output.bmp");
+
+    cout << endl;
+    cout << "The total amount of time digits 1, 4, 7, and 8 appear on the output is " << totalBasicDigitsCount << " times." << endl;
+    cout << "The output value is " << outputSum << endl;
     return 0;
 }
