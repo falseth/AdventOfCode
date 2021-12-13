@@ -1,0 +1,6 @@
+﻿  main.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 231 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  day2.vcxproj -> C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day2\bin\day2.exe

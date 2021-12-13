@@ -1,0 +1,51 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "86aa2b2c-3f62-4591-b5a1-785c290734bd": {
+      "ProjectGuid": "86aa2b2c-3f62-4591-b5a1-785c290734bd",
+      "DisplayName": "day1",
+      "ColorIndex": 0
+    },
+    "9fc7a9f8-cb32-4cfb-be44-6f50f875752d": {
+      "ProjectGuid": "9fc7a9f8-cb32-4cfb-be44-6f50f875752d",
+      "DisplayName": "day2",
+      "ColorIndex": 1
+    },
+    "9d87d014-b662-4321-a0cb-0d2fe8b90f59": {
+      "ProjectGuid": "9d87d014-b662-4321-a0cb-0d2fe8b90f59",
+      "DisplayName": "day3",
+      "ColorIndex": 2
+    },
+    "f07f37bb-997c-49a1-b985-2b2a8a4ce586": {
+      "ProjectGuid": "f07f37bb-997c-49a1-b985-2b2a8a4ce586",
+      "DisplayName": "day4",
+      "ColorIndex": 3
+    },
+    "8abaca06-2fa1-48a9-b81c-25fca2044217": {
+      "ProjectGuid": "8abaca06-2fa1-48a9-b81c-25fca2044217",
+      "DisplayName": "day5",
+      "ColorIndex": 4
+    },
+    "bcdfa9b2-64f6-4707-a337-3d0fa1efb05e": {
+      "ProjectGuid": "bcdfa9b2-64f6-4707-a337-3d0fa1efb05e",
+      "DisplayName": "day6",
+      "ColorIndex": 5
+    },
+    "dd466170-5a65-4798-9fc3-6794d3333834": {
+      "ProjectGuid": "dd466170-5a65-4798-9fc3-6794d3333834",
+      "DisplayName": "day7",
+      "ColorIndex": 6
+    },
+    "f017337c-bc5a-40db-9131-325dd7f97b5b": {
+      "ProjectGuid": "f017337c-bc5a-40db-9131-325dd7f97b5b",
+      "DisplayName": "day8",
+      "ColorIndex": 7
+    },
+    "3ddd2818-bc35-4403-9fda-1b1975cf0af6": {
+      "ProjectGuid": "3ddd2818-bc35-4403-9fda-1b1975cf0af6",
+      "DisplayName": "day9",
+      "ColorIndex": 8
+    }
+  },
+  "NextColorIndex": 9
+}
