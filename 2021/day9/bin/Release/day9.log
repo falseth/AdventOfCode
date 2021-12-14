@@ -1,6 +1,21 @@
 ﻿  lib.cpp
-C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day9\src\lib.cpp(44,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day9\src\lib.cpp(45,35): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  main.cpp
-main.obj : error LNK2001: unresolved external symbol "class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl operator<<<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >(class std::basic_ostream<char,struct std::char_traits<char> > &,class std::vector<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::allocator<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > &)" (??$?6V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV01@AEAV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@1@@Z)
-C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day9\bin\day9.exe : fatal error LNK1120: 1 unresolved externals
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day9\src\lib.cpp(99,32): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day9\src\lib.cpp(100,35): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day9\src\lib.cpp(119,68): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day9\src\lib.cpp(135,43): warning C4267: 'argument': conversion from 'size_t' to '_Ty', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day9\src\lib.cpp(195,39): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day9\src\lib.cpp(219,42): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day9\src\lib.cpp(241,38): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day9\src\lib.cpp(250,35): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day9\src\lib.cpp(260,35): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day9\src\lib.cpp(261,38): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  Generating code
+  1 of 528 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  day9.vcxproj -> C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day9\bin\day9.exe

@@ -147,10 +147,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\EasyBMP.cpp" />
     <ClCompile Include="src\lib.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\EasyBMP.h" />
+    <ClInclude Include="src\EasyBMP_BMP.h" />
+    <ClInclude Include="src\EasyBMP_DataStructures.h" />
+    <ClInclude Include="src\EasyBMP_VariousBMPutilities.h" />
     <ClInclude Include="src\lib.hpp" />
   </ItemGroup>
   <ItemGroup>

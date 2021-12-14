@@ -4,7 +4,7 @@ using namespace std;
 
 int main(void) {
     ifstream file;
-    file.open("src/test.txt");
+    file.open("src/input.txt");
 
     if (!file.is_open()) {
         cout << "ERROR OPENING INPUT FILE" << endl;
@@ -19,6 +19,6 @@ int main(void) {
     file.close();
 
     Map map(input);
-    cout << input;
+    map.output();
     return 0;
 }
