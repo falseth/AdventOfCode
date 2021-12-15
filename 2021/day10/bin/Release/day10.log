@@ -1,0 +1,11 @@
+﻿  lib.cpp
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day10\src\lib.cpp(96,38): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day10\src\lib.cpp(101,38): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day10\src\lib.cpp(284,16): warning C4804: '-': unsafe use of type 'bool' in operation
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day10\src\lib.cpp(382,48): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 413 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  day10.vcxproj -> C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day10\bin\day10.exe

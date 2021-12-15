@@ -45,7 +45,17 @@
       "ProjectGuid": "3ddd2818-bc35-4403-9fda-1b1975cf0af6",
       "DisplayName": "day9",
       "ColorIndex": 8
+    },
+    "c0731b24-f9b8-4dcc-ba29-c16ed97e2fc6": {
+      "ProjectGuid": "c0731b24-f9b8-4dcc-ba29-c16ed97e2fc6",
+      "DisplayName": "day10",
+      "ColorIndex": 9
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
-  "NextColorIndex": 9
+  "NextColorIndex": 10
 }
