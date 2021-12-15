@@ -1,0 +1,16 @@
+﻿  EasyBMP.cpp
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day11\src\EasyBMP.cpp(994,13): warning C4101: 'ZeroWORD': unreferenced local variable
+  lib.cpp
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day11\src\lib.cpp(103,38): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day11\src\lib.cpp(108,38): warning C4267: '=': conversion from 'size_t' to 'long', possible loss of data
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day11\src\lib.cpp(291,16): warning C4804: '-': unsafe use of type 'bool' in operation
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day11\src\lib.cpp(323,35): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day11\src\lib.cpp(324,38): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day11\src\lib.cpp(386,72): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day11\src\lib.cpp(397,74): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 433 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  day11.vcxproj -> C:\Users\kiki\Documents\Programming\AdventOfCode\2021\day11\bin\day11.exe
